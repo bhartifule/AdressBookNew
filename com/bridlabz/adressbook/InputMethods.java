@@ -104,7 +104,8 @@ public class InputMethods {
                 }
             }
         }
-        for (int i=0;i<person-1;i++){
+        for (int i=0;i<person-1;i++)
+        {
             System.out.println(array[i].getFirstName() + " " + array[i].getLastName() + " " + array[i].getAddress() + " "
                     + array[i].getCity() + " " + array[i].getState() + " " + array[i].getEmail() + " " + array[i].getZip() + " "+array[i].getPhoneNo());
         }

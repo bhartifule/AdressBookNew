@@ -2,7 +2,8 @@ package com.bridlabz.adressbook;
 
 import java.util.Scanner;
 
-public class AddressBookMain extends InputMethods  {
+public class AddressBookMain extends InputMethods
+{
 
         static Scanner scanner = new Scanner(System.in);
 
@@ -35,8 +36,9 @@ public class AddressBookMain extends InputMethods  {
                     System.out.println("Thank You!!");
                     break;
                 default:
-                    System.out.println("Invalid input!!");
+                      System.out.println("Invalid input!!");
             }
+
         }
     }
     }
