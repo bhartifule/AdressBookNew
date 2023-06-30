@@ -2,63 +2,42 @@ package com.bridlabz.adressbook;
 
 import java.util.Scanner;
 
-public class AddressBookMain {
-    public static void main(String[] args)
-    {
-        System.out.println("uc1");
-        System.out.println("Welcome In Address Book Problem");
-        Contacts contacts = new Contacts("Bharati" ,"Fule","Hingna_Nagpur","Nagpur","MH",
-                441110,914680033,"bharatif10@gmail.com");
-        System.out.println(contacts.firstName);
-        System.out.println(contacts.lastName);
-        System.out.println(contacts.address);
-        System.out.println(contacts.city);
-        System.out.println(contacts.state);
-        System.out.println(contacts.zip);
-        System.out.println(contacts.phoneNo);
-        System.out.println(contacts.email);
+public class AddressBookMain extends InputMethods  {
 
-        //uc2
+        static Scanner scanner = new Scanner(System.in);
+
+        public static void main(String[] args) {
+        InputMethods inputMethods = new InputMethods();
         System.out.println("Welcome to the address Book Program!!");
-        Scanner scanner = new Scanner(System.in);
         System.out.println("How many Person you want to add in address book:");
         int person = scanner.nextInt();
         Contacts[] array = new Contacts[person];
-        for(int i=0; i< person; i++){
-            System.out.println("Enter "+(i+1)+" person firstname : ");
-            String firstName = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person lastname : ");
-            String lastName = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person address : ");
-            String address = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person city : ");
-            String city = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person state : ");
-            String state = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person email : ");
-            String email = scanner.next();
-
-            System.out.println("Enter "+(i+1)+" person phoneNo : ");
-            int phoneNo = scanner.nextInt();
-
-            System.out.println("Enter "+(i+1)+" person zip : ");
-            int zip = scanner.nextInt();
-
-            Contacts contacts1 = new Contacts(firstName,lastName,address, city, state, zip, phoneNo,email);
-            array[i]=contacts1;
-        }
-
-        System.out.println();
-        System.out.println("*******Address Book************");
-        for (int i=0; i< person ; i++){
-            System.out.println(array[i].firstName+ " "+ array[i].lastName+ " "+array[i].address+ " "
-                    +array[i].phoneNo+" "+array[i].state+ " "+array[i].city+ " "+array[i].zip);
+        int result =0;
+        while(result!=4) {
+            System.out.println();
+            System.out.println("Select the option from following Menu");
+            System.out.println("1. Add" + " 2. Edit" + " 3. Print" + "4. Delete" + " 5. Stop");
+            result = scanner.nextInt();
+            switch (result) {
+                case 1:
+                    inputMethods.add(person, array);
+                    break;
+                case 2:
+                    inputMethods.edit(person,array);
+                    break;
+                case 3:
+                    inputMethods.print(person, array);
+                    break;
+                case 4:
+                    inputMethods.delete(person, array);
+                    break;
+                case 5:
+                    System.out.println("Thank You!!");
+                    break;
+                default:
+                    System.out.println("Invalid input!!");
+            }
         }
     }
+    }
 
-}
