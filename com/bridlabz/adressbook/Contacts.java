@@ -10,7 +10,8 @@ public class Contacts {
     int phoneNo;
     String email;
 
-    public Contacts(String firstName, String lastName, String address, String city, String state, int zip, int phoneNo, String email) {
+    public Contacts(String firstName, String lastName, String address, String city, String state,
+                    int zip, int phoneNo, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
