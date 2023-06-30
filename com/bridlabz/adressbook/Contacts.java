@@ -1,6 +1,7 @@
 package com.bridlabz.adressbook;
 
-public class Contacts {
+public class Contacts
+{
     String firstName;
     String lastName;
     String  address;
