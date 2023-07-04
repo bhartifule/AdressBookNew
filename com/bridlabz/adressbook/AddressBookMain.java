@@ -21,7 +21,7 @@ public class AddressBookMain extends InputMethods
             result = scanner.nextInt();
             switch (result) {
                 case 1:
-                    inputMethods.add(person, array);
+                     inputMethods.add(person, array);
                     break;
                 case 2:
                     inputMethods.edit(person,array);
